@@ -36,8 +36,6 @@ public class AddDialog {
         btConfirma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                nome = "ovo";
-                comentario = "uma duzia";
                 nome = TVnome.getText().toString();
                 comentario = TVcomentario.getText().toString();
                 mListener = (OnChooseOption) context;
