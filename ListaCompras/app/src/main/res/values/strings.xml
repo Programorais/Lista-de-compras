@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ListaCompras</string>
+    <string name="s_name">Name</string>
+    <string name="s_comment">Comentario</string>
+    <string name="s_important">Importantes</string>
+    <string name="s_voltar">Voltar</string>
+    <string name="s_space"> </string>
+    <string name="s_message_importante">Esse item é importante ou deseja deleta-lo?</string>
+    <string name="s_its_important">É importante</string>
+    <string name="s_its_not_important">Não é importante</string>
+    <string name="s_excluir">Excluir</string>
+    <string name="s_isnt_important">Não é importante</string>
+    <string name="s_add">"ADICIONAR</string>
+</resources>

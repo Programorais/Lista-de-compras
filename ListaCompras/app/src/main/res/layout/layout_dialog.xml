@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:gravity="center"
+        android:text="@string/s_message_importante" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_importante"
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_gravity="bottom"
+            android:layout_margin="4dp"
+            android:layout_height="56dp"/>
+
+        <Button
+            android:id="@+id/bt_delete"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="4dp"
+            android:layout_gravity="bottom"
+            android:layout_height="56dp"
+            android:text="@string/s_excluir" />
+    </LinearLayout>
+
+
+
+</LinearLayout>
