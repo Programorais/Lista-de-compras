@@ -11,9 +11,8 @@ public class AddDialog {
 
     private Dialog dialog;
     private OnChooseOption mListener;
-    private  String nome;
+    private String nome;
     private String comentario;
-
 
     public Dialog showDialog(final Context context){
 
@@ -22,12 +21,9 @@ public class AddDialog {
 
         Button btCancela = (Button) view.findViewById(R.id.bt_cancelar);
         Button btConfirma = (Button) view.findViewById(R.id.bt_OK);
-        TextView TVnome = (TextView) view.findViewById(R.id.editText_nome);
-        TextView TVcomentario = (TextView) view.findViewById(R.id.editText_comentario);
+        final TextView TVnome = (TextView) view.findViewById(R.id.editText_nome);
+        final TextView TVcomentario = (TextView) view.findViewById(R.id.editText_comentario);
 
-
-        nome = (String) TVnome.getText();
-        comentario = (String) TVcomentario.getText();
 
         btCancela.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +36,10 @@ public class AddDialog {
         btConfirma.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                nome = "ovo";
+                comentario = "uma duzia";
+                nome = TVnome.getText().toString();
+                comentario = TVcomentario.getText().toString();
                 mListener = (OnChooseOption) context;
                 mListener.onConfirma(nome, comentario);
                 dialog.dismiss();

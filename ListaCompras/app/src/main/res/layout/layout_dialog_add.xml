@@ -2,14 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="16dp"
-    android:layout_marginLeft="16dp"
-    android:layout_marginRight="16dp"
     android:orientation="vertical">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="#555"
+        android:textColor="#FFF"
+        android:padding="8dp"
         android:layout_marginBottom="16dp"
         android:text="@string/s_add"
         android:textSize="24sp" />
@@ -17,18 +18,24 @@
     <EditText
         android:id="@+id/editText_nome"
         android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:layout_height="wrap_content"
+        android:hint="Nome do item"
         android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="8dp"
-        android:text="Nome do item" />
+        android:inputType="textCapSentences"
+        android:layout_marginBottom="8dp" />
 
     <EditText
         android:id="@+id/editText_comentario"
         android:layout_width="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:maxLines="1"
         android:layout_marginBottom="8dp"
-        android:text="Comentário" />
+        android:hint="Comentário" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -52,4 +59,6 @@
             android:layout_weight="1"
             android:text="ok" />
     </LinearLayout>
+
+
 </LinearLayout>

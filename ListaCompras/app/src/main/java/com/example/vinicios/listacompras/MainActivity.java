@@ -20,12 +20,11 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements CustomDialog.OnChooseOption, AddDialog.OnChooseOption{
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "MainActivity";//para testes Log.i
     private RecyclerView recycler;
     private Button btMostrarImportante;
     private Button btOrdenar;
     private Button btAdd;
-
     private int ij;
     private List<Item> lista;
     private ItemAdapter adapter;
@@ -51,9 +50,9 @@ public class MainActivity extends AppCompatActivity implements CustomDialog.OnCh
 
     private void setRecyclerView(){
         lista = new ArrayList<>();
-
-        lista.add(new Item("DICA!", "Toque DUAS VEZES em um item para mais opções.", false));
         lista.add(new Item("Pães", "10 pães franceses", false));
+        lista.add(new Item("DICA!", "Toque DUAS VEZES em um item para mais opções.", true));
+
 
         adapter = new ItemAdapter(lista);
         RecyclerView.LayoutManager layout = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -129,12 +128,8 @@ public class MainActivity extends AppCompatActivity implements CustomDialog.OnCh
                     voltar = false;
                 }
 
-                Dialog dialog = new AddDialog().showDialog(MainActivity.this);
-                dialog.show();
-                Log.i("Botao apertado","chama o dialog aqui");
-                //lista.add(new Item("Novo example", "comentario novo", false));
-                adapter.notifyDataSetChanged();
-
+                Dialog Add = new AddDialog().showDialog(MainActivity.this);
+                Add.show();
 
             }
         });
